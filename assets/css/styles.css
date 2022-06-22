@@ -280,10 +280,12 @@ body {
 .about-us .container {
     padding-top: 293px;
     padding-bottom: 245px;
-    max-width: 986px;
     width: 100%;
-    margin: 0;
-    padding-left: clamp( 15px, 20vw, 325px);
+    padding-left: clamp( 15px, 20vw, 208px);
+}
+
+.about-us .about-us__wrapper {
+    max-width: 647px;
 }
 
 .about-us h3 {
