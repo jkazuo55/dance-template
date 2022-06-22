@@ -331,7 +331,7 @@ body {
 
 .private-class .private-class__graphic1 img,
 .private-class .private-class__graphic2 img {
-    max-width: 150px;
+    max-width: clamp(150px, 25vw, 100%);
 }
 
 .private-class .private-class__info {
@@ -355,7 +355,7 @@ body {
 }
 
 .private-class .private-class__paragraph {
-    max-width: 467px;
+    max-width: clamp(375px, 35vw, 476px);
 }
 
 .private-class .private-class__info p {
@@ -366,6 +366,43 @@ body {
 
 
 /* ============ end private class section ============*/
+
+
+/* ============ start classes available class section  ============*/
+
+.classes-available {
+    background-image: url("../images/classes\ available\ background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.classes-available .container {
+    max-width: 882px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 290px;
+    padding-bottom: 50px;
+}
+
+.classes-available h3 {
+    font-size: clamp(70px, 20vw, 119px);
+    line-height: clamp(70px, 20vw, 115px);
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 27px;
+}
+
+.classes-available p {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+/* ============ end classes available class section  ============*/
 
 @media(max-width:768px) {
     /* =================  start hero section ============== */
