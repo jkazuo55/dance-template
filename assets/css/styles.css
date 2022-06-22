@@ -1,6 +1,6 @@
-/* =========== GOOGLE FONTS Cormorant Upright*/
+/* =========== GOOGLE FONTS Cormorant Upright and Arapey*/
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@1&family=Cormorant+Upright:wght@300;600;700&display=swap');
 
 /*===== VARIABLES CSS =====*/
 
@@ -10,6 +10,8 @@
     --color-second: rgb(255, 255, 255);
     /* font and typography */
     --font-cormorant: 'Cormorant Upright', serif;
+    --font-arapey: 'Arapey', serif;
+    ;
     /* z index */
     --global-z-fixed: 99;
     /* paddings */
@@ -80,8 +82,18 @@ body {
     /* background-color: orange; */
     justify-content: space-between;
     align-items: center;
-    padding-top: 95px;
+    /* padding-top: 95px; */
+    /* padding-bottom: var(--padding-container); */
+}
+
+.container--heading {
     padding-bottom: var(--padding-container);
+    padding-top: 95px;
+}
+
+.container--shrink {
+    padding-top: var(--padding-container);
+    background-color: var(--color-second);
 }
 
 .menubar-toggle {
@@ -413,6 +425,11 @@ body {
     background-size: cover;
     background-position: center;
     padding-top: 191px;
+    padding-bottom: 283px;
+}
+
+.classes-attend .container {
+    max-width: 1205px;
 }
 
 .classes-attend h3 {
@@ -432,7 +449,6 @@ body {
 }
 
 .classes-attend .classes-attend__info {
-    /* padding-top: 145px; */
     max-width: 525px;
 }
 
@@ -453,6 +469,89 @@ body {
 
 
 /* ============ end classes attend section  ============*/
+
+
+/* ============ start newsletter section  ============*/
+
+.newsletter {
+    background-image: url("../images/newsletter\ background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.newsletter .container {
+    max-width: 1162px;
+    padding-top: 85px;
+}
+
+.newsletter .newsletter__title {
+    font-size: clamp(70px, 20vw, 119px);
+    line-height: clamp(70px, 20vw, 115px);
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.newsletter .newsletter__opinions {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding-bottom: 160px;
+}
+
+.newsletter .newsletter__opinions li {
+    max-width: 536px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.newsletter .newsletter__opinions span {
+    font-size: 130px;
+    line-height: 131px;
+    font-weight: 400;
+    font-style: italic;
+    font-family: var(--font-arapey);
+    text-align: center;
+}
+
+.newsletter .newsletter__opinions p {
+    max-width: 490px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.newsletter .newsletter__footer {
+    max-width: 997px;
+}
+
+.newsletter .newsletter__footer h3 {
+    line-height: 97px;
+    font-weight: 700;
+    padding-bottom: 55px;
+}
+
+.newsletter .newsletter__link {
+    max-width: 516px;
+    float: right;
+}
+
+.newsletter .newsletter__link a {
+    display: inline-block;
+    font-size: 37px;
+    line-height: 35px;
+    font-weight: 700;
+    padding: 12px 105px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #136cb7;
+}
+
+
+/* ============ end newsletter section  ============*/
 
 @media(max-width:768px) {
     /* =================  start hero section ============== */
@@ -502,6 +601,15 @@ body {
     .classes-attend ul li {
         flex-direction: column;
     }
+    /* ============ start newsletter section  ============*/
+    .newsletter .newsletter__opinions {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .newsletter .newsletter__opinions li {
+        margin: 0 auto;
+    }
+    /* ============ end newsletter section  ============*/
     /* ============ end classes attend section  ============*/
 }
 

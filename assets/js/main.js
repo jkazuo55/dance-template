@@ -1,3 +1,7 @@
+window.onscroll = function() {
+    const header = document.getElementsByClassName('container--heading')[0];
+    header.classList.toggle("container--shrink", window.pageYOffset > 0);
+}
 $(document).ready(function() {
     $(".menubar-toggle").click(function() {
         $(".navigation").toggleClass("open-navigation");
