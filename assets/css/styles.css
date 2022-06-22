@@ -261,10 +261,45 @@ body {
 .hero .hero__arrow-down p {
     font-size: 14px;
     font-weight: 700;
+    padding-bottom: 64px;
 }
 
 
 /* ============ end hero section ============*/
+
+
+/* ============ start about us section ============*/
+
+.about-us {
+    background-image: url("../images/about\ us\ background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-us .container {
+    padding-top: 293px;
+    padding-bottom: 245px;
+    max-width: 986px;
+    width: 100%;
+    margin: 0;
+    padding-left: clamp( 15px, 20vw, 325px);
+}
+
+.about-us h3 {
+    font-size: 119px;
+    line-height: 115px;
+    font-weight: 700;
+    padding-bottom: 22px;
+}
+
+.about-us p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+/* ============ end about us section ============*/
 
 @media(max-width:768px) {
     /* =================  start hero section ============== */
@@ -282,9 +317,23 @@ body {
         padding-top: 20px;
     }
     /* =================  end hero section ============== */
+    /* =================  start about us section ============== */
+    .about-us {
+        display: flex;
+        justify-content: center;
+    }
+    .about-us .container {
+        max-width: 677px;
+        padding-left: var(--padding-container);
+        padding-right: var(--padding-container);
+    }
+    .about-us h3 {
+        font-size: clamp(70px, 20vw, 119px);
+    }
+    /* =================  end about us section ============== */
 }
 
-@media(max-width:768px) {
+@media(max-width:576px) {
     /* =================  start hero section ============== */
     .hero .hero__info h1 {
         font-size: 65px;
