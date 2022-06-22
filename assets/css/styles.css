@@ -303,6 +303,70 @@ body {
 
 /* ============ end about us section ============*/
 
+
+/* ============ start private class section ============*/
+
+.private-class {
+    background-image: url("../images/private\ class\ background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.private-class .container {
+    position: relative;
+    padding-top: 118px;
+    padding-bottom: 45px;
+}
+
+.private-class .private-class__graphic1,
+.private-class .private-class__graphic2 {
+    display: flex;
+}
+
+.private-class .private-class__graphic2 {
+    justify-content: end;
+    padding-top: 45px;
+}
+
+.private-class .private-class__graphic1 img,
+.private-class .private-class__graphic2 img {
+    max-width: 150px;
+}
+
+.private-class .private-class__info {
+    max-width: clamp(500px, 50vw, 612px);
+    width: 100%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.private-class .private-class__info h3 {
+    font-size: clamp(80px, 10vw, 119px);
+    line-height: clamp(80px, 10vw, 119px);
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.private-class .private-class__paragraph {
+    max-width: 467px;
+}
+
+.private-class .private-class__info p {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+/* ============ end private class section ============*/
+
 @media(max-width:768px) {
     /* =================  start hero section ============== */
     .hero {
@@ -333,6 +397,20 @@ body {
         font-size: clamp(70px, 20vw, 119px);
     }
     /* =================  end about us section ============== */
+    /* =================  start private class section ============== */
+    .private-class .private-class__graphic1,
+    .private-class .private-class__graphic2 {
+        display: none;
+    }
+    .private-class .private-class__info {
+        position: static;
+        transform: none;
+        max-width: 100%;
+    }
+    .private-class .private-class__info h3 {
+        font-size: 70px;
+    }
+    /* =================  end private class section ============== */
 }
 
 @media(max-width:576px) {
