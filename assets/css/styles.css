@@ -404,6 +404,56 @@ body {
 
 /* ============ end classes available class section  ============*/
 
+
+/* ============ start classes attend section  ============*/
+
+.classes-attend {
+    background-image: url("../images/classes\ attend\ background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 191px;
+}
+
+.classes-attend h3 {
+    font-size: clamp(70px, 20vw, 119px);
+    line-height: clamp(70px, 20vw, 115px);
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 205px;
+}
+
+.classes-attend ul li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 70px;
+    align-items: center;
+    gap: 15px;
+}
+
+.classes-attend .classes-attend__info {
+    /* padding-top: 145px; */
+    max-width: 525px;
+}
+
+.classes-attend .classes-attend__info h4 {
+    padding-bottom: 20px;
+    font-size: 37px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+.classes-attend .classes-attend__info p {
+    max-width: 486px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+
+/* ============ end classes attend section  ============*/
+
 @media(max-width:768px) {
     /* =================  start hero section ============== */
     .hero {
@@ -448,6 +498,11 @@ body {
         font-size: 70px;
     }
     /* =================  end private class section ============== */
+    /* ============ start classes attend section  ============*/
+    .classes-attend ul li {
+        flex-direction: column;
+    }
+    /* ============ end classes attend section  ============*/
 }
 
 @media(max-width:576px) {
