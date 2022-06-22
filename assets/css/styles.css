@@ -1,0 +1,187 @@
+/* =========== GOOGLE FONTS Cormorant Upright*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;600;700&display=swap');
+
+/*===== VARIABLES CSS =====*/
+
+:root {
+    /* colors */
+    --color-first: rgb(10, 106, 181);
+    --color-second: rgb(255, 255, 255);
+    /* font and typography */
+    --font-cormorant: 'Cormorant Upright', serif;
+    /* z index */
+    --global-z-fixed: 99;
+    /* paddings */
+    --padding-container: 15px
+}
+
+
+/*========== BASE ==========*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: var(--font-cormorant);
+}
+
+
+/* ============ SELECTORS ============= */
+
+.container {
+    padding-left: var(--padding-container);
+    padding-right: var(--padding-container);
+    max-width: 1208px;
+    margin: 0 auto;
+}
+
+
+/* ============ start heading section ============*/
+
+.heading {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.heading .container {
+    display: flex;
+    max-height: 100vh;
+    background-color: orange;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 95px;
+    padding-bottom: var(--padding-container);
+}
+
+.menubar-toggle {
+    color: var(--color-first);
+    font-size: 25px;
+}
+
+.menubar-toggle:hover,
+.heading .heading__search-bag-icons a {
+    color: black;
+}
+
+.heading .heading__search-bag-icons {
+    max-width: 57px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading .heading__search-bag-icons a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    position: absolute;
+    left: -100%;
+    top: 0px;
+    background-image: linear-gradient(to right, #141e30, #243b55);
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    transition: 1s;
+}
+
+.navigation .navigation__container ul li label {
+    font-size: 30px;
+    color: var(--color-first);
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation .navigation__container ul li label:hover,
+.navigation .navigation__container ul ul li a:hover {
+    color: var(--color-second);
+}
+
+.navigation .navigation__container ul li label span {
+    font-size: 15px;
+}
+
+.navigation .menubar-toggle {
+    position: absolute;
+    right: calc(var(--padding-container)*2);
+    top: calc(var(--padding-container)*2);
+}
+
+.navigation .navigation__container {
+    display: flex;
+    justify-content: center;
+    padding-top: 110px;
+}
+
+.navigation .navigation__container ul {
+    max-width: 250px;
+    width: 100%;
+}
+
+.navigation .navigation__container ul ul li a {
+    padding-left: 20px;
+    font-size: 20px;
+    color: var(--color-first);
+    font-weight: 300;
+    text-align: left;
+}
+
+.open-navigation {
+    left: 0px;
+}
+
+.navigation ul ul {
+    display: none;
+}
+
+[id^=btn]:checked+ul {
+    display: block;
+}
+
+.navigation label {
+    font-size: 22px;
+    display: block;
+    cursor: pointer;
+}
+
+.navigation ul li {
+    padding: 5px 0;
+}
+
+.navigation .navigation__container ul input {
+    display: none;
+}
